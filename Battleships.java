@@ -176,7 +176,7 @@ public class Battleships {
 				input.next();
 			} catch (ArrayIndexOutOfBoundsException e) {
 				System.out.println("Please enter a valid choice");
-			}
+			}// end catch
 		} // end while
 
 		return;
@@ -268,7 +268,7 @@ public class Battleships {
 			} catch (ArrayIndexOutOfBoundsException e) {
 				System.out.println("Please enter a valid coordinate");
 				continue;
-			}
+			}// end catch
 
 		} // end while
 
