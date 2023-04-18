@@ -9,6 +9,7 @@
 
 import java.util.Scanner;
 import java.util.InputMismatchException;
+import java.lang.ArrayIndexOutOfBoundsException;
 
 /*
  * This project is a battleship game. It allows you to fight against a computer
@@ -173,7 +174,9 @@ public class Battleships {
 			} catch (InputMismatchException e) {
 				System.out.println("Please enter a valid choice");
 				input.next();
-			} // end catch
+			} catch (ArrayIndexOutOfBoundsException e) {
+				System.out.println("Please enter a valid choice");
+			}
 		} // end while
 
 		return;
@@ -252,18 +255,20 @@ public class Battleships {
 					} // end if
 
 				} else {
-					System.out.println("Please enter a valid guess");
+					System.out.println("Please enter a valid coordinate");
 					continue;
 				}
 
 				turn = false;
 
 			} catch (InputMismatchException e) {
-				System.out.println("Plese enter a valid coordinate");
+				System.out.println("Please enter a valid coordinate");
 				input.next();
-				printMap();
 				continue;
-			} // end catch
+			} catch (ArrayIndexOutOfBoundsException e) {
+				System.out.println("Please enter a valid coordinate");
+				continue;
+			}
 
 		} // end while
 
