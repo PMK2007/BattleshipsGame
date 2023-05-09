@@ -2,9 +2,6 @@
 /**
 * Battleships.java
 * A Battleship game in a console program
-* @author MK Pham
-* Computing Science 10
-* Copyright 2023, Centennial High School. All rights reserved.
 */
 
 import java.util.Scanner;
